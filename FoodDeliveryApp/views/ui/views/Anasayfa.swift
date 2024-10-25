@@ -45,6 +45,16 @@ class Anasayfa: UIViewController {
         YemeklerColelctionView.collectionViewLayout = tasarim
         
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetay" {
+            if let yemek = sender as? Yemekler {
+                let gidilecekVC = segue.destination as! Detay
+                gidilecekVC.yemek = yemek
+            }
+        }
+    }
 
 
 }
@@ -88,5 +98,16 @@ extension Anasayfa: UICollectionViewDataSource,UICollectionViewDelegate {
         
         return hucre
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let yemek = yemeklerListesi[indexPath.row]
+        performSegue(withIdentifier: "toDetay", sender: yemek)
+        collectionView.deselectItem(at: indexPath, animated: true)
+    }
+
+    
+    
+ 
     
 }

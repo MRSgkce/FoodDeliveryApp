@@ -11,6 +11,6 @@
 import Foundation
 
 class CRUDCevap: Codable {
-    var status: String?
+    var success: String?
     var message: String?
 }

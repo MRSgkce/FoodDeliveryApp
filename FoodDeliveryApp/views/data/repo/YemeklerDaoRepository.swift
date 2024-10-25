@@ -54,6 +54,36 @@ class YemeklerDaoRepository {
                 }
             }
         }
+    
+    
+    
+    
+    
+  
+    
+    
+    func sepeteEkle(yemek: Yemekler, adet: Int, kullaniciAdi: String, completion: @escaping (Result<Any, Error>) -> Void) {
+            let url = "http://kasimadalan.pe.hu/yemekler/sepeteYemekEkle.php"
+            
+            let parameters: [String: Any] = [
+                "yemek_adi": yemek.yemek_adi!,
+                "yemek_resim_adi": yemek.yemek_resim_adi!,
+                "yemek_fiyat": yemek.yemek_fiyat!,
+                "yemek_siparis_adet": adet,
+                "kullanici_adi": kullaniciAdi
+            ]
+            
+            AF.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default).responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    completion(.success(value))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+        }
+    
+    
     }
 
 
