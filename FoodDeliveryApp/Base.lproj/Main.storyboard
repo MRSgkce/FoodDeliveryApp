@@ -1,24 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xEX-wq-RDe">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Yemekler-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="Anasayfa" customModule="FoodDeliveryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hL4-Sc-HXT">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oHQ-M9-07K">
+                                    <size key="itemSize" width="265" height="555"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="yemeklerHucre" id="R9c-mH-KYD" customClass="yemeklerHucre" customModule="FoodDeliveryApp" customModuleProvider="target">
+                                        <rect key="frame" x="64" y="0.0" width="265" height="555"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8Nu-dF-dIx">
+                                            <rect key="frame" x="0.0" y="0.0" width="265" height="555"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yiyecek" translatesAutoresizingMaskIntoConstraints="NO" id="vys-DJ-nRh">
+                                                    <rect key="frame" x="-1.6666666666666714" y="10" width="183.33333333333337" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="2fN-Zv-PIH"/>
+                                                        <constraint firstAttribute="width" constant="183.33000000000001" id="NlL-JD-Y2o"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="124 tl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNT-h0-bry">
+                                                    <rect key="frame" x="68" y="293" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="It3-VA-auC">
+                                                    <rect key="frame" x="24" y="367" width="130" height="35"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Sepete ekle">
+                                                        <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="sepeteEkleButonu:" destination="R9c-mH-KYD" eventType="touchUpInside" id="VMA-VS-cPD"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qNT-h0-bry" firstAttribute="centerX" secondItem="It3-VA-auC" secondAttribute="centerX" id="3uy-RR-7bj"/>
+                                                <constraint firstItem="It3-VA-auC" firstAttribute="top" secondItem="qNT-h0-bry" secondAttribute="bottom" constant="53" id="QF7-r2-7vu"/>
+                                                <constraint firstItem="vys-DJ-nRh" firstAttribute="leading" secondItem="8Nu-dF-dIx" secondAttribute="leading" constant="-1.6666666666666714" id="SWj-fn-iTu"/>
+                                                <constraint firstItem="vys-DJ-nRh" firstAttribute="top" secondItem="8Nu-dF-dIx" secondAttribute="top" constant="10" id="WeR-WY-8mF"/>
+                                                <constraint firstItem="qNT-h0-bry" firstAttribute="top" secondItem="vys-DJ-nRh" secondAttribute="bottom" constant="8" symbolic="YES" id="Yc6-Rh-jas"/>
+                                                <constraint firstItem="qNT-h0-bry" firstAttribute="leading" secondItem="8Nu-dF-dIx" secondAttribute="leading" constant="68" id="lV1-RS-WOj"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="265" height="555"/>
+                                        <connections>
+                                            <outlet property="imageViewYemek" destination="vys-DJ-nRh" id="H4g-8F-Jup"/>
+                                            <outlet property="labelYemekFiyat" destination="qNT-h0-bry" id="at5-qq-NND"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hL4-Sc-HXT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fIc-hb-I9q"/>
+                            <constraint firstItem="hL4-Sc-HXT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="j0M-l3-K5d"/>
+                            <constraint firstItem="hL4-Sc-HXT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kO1-Vl-uXt"/>
+                            <constraint firstItem="hL4-Sc-HXT" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="kSO-nE-37S"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Yemekler" id="wUK-aJ-9ii"/>
+                    <connections>
+                        <outlet property="YemeklerColelctionView" destination="hL4-Sc-HXT" id="K9T-CF-dIJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="936.64122137404581" y="-34.507042253521128"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wth-tY-ZHZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xEX-wq-RDe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Vcv-51-qyc">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9Mm-Y5-UlC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dYM-7t-wdl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9.9236641221374047" y="-34.507042253521128"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="yiyecek" width="183" height="275"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
