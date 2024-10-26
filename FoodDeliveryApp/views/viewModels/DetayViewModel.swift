@@ -4,6 +4,11 @@
 //
 //  Created by Mürşide Gökçe on 25.10.2024.
 //
+import Foundation
+import RxSwift
+import Alamofire
+import RxSwift
+import Kingfisher
 
 class DetayViewModel{
     var yrepo = YemeklerDaoRepository()

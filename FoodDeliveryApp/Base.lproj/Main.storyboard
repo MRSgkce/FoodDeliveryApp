@@ -127,6 +127,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="SepeteEkleButonu:" destination="cjj-fH-Ly4" eventType="touchUpInside" id="UlU-m7-SDS"/>
+                                    <segue destination="BsQ-D3-TUK" kind="show" identifier="toSepet" id="Tz0-an-E5g"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kingfisher-1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="GAZ-qw-CZ9">
@@ -236,6 +237,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rvc-Cs-it9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2069.4656488549617" y="-34.507042253521128"/>
+        </scene>
+        <!--Sepet Detay-->
+        <scene sceneID="JNM-lN-PF7">
+            <objects>
+                <viewController id="BsQ-D3-TUK" customClass="SepetDetay" customModule="FoodDeliveryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fud-iZ-XfK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="I7X-tV-6xi">
+                                <rect key="frame" x="0.0" y="155" width="393" height="663"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="H16-gT-Reo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H16-gT-Reo" firstAttribute="trailing" secondItem="I7X-tV-6xi" secondAttribute="trailing" id="8F8-vl-vKk"/>
+                            <constraint firstItem="I7X-tV-6xi" firstAttribute="leading" secondItem="H16-gT-Reo" secondAttribute="leading" id="DQQ-Js-dpf"/>
+                            <constraint firstItem="H16-gT-Reo" firstAttribute="bottom" secondItem="I7X-tV-6xi" secondAttribute="bottom" id="SPb-jW-W5p"/>
+                            <constraint firstItem="I7X-tV-6xi" firstAttribute="top" secondItem="H16-gT-Reo" secondAttribute="top" id="cl5-36-LmU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VX8-Xq-twZ"/>
+                    <connections>
+                        <outlet property="tableviewsepet" destination="I7X-tV-6xi" id="dGY-ES-oc9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6AN-b5-BNU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3072.5190839694656" y="-35.211267605633807"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wth-tY-ZHZ">
